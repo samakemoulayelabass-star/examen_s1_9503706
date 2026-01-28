@@ -20,23 +20,15 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              controller: login,
-              decoration: const InputDecoration(labelText: "Login"),
-            ),
-            TextField(
-              controller: password,
-              obscureText: true,
-              decoration: const InputDecoration(labelText: "Mot de passe"),
-            ),
+            TextField(controller: login, decoration: const InputDecoration(labelText: "Login")),
+            TextField(controller: password, obscureText: true, decoration: const InputDecoration(labelText: "Mot de passe")),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 if (login.text == "3ii" && password.text == "moulaye") {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(
-                        builder: (_) => const EtudiantList()),
+                    MaterialPageRoute(builder: (_) => const EtudiantList()),
                   );
                 }
               },

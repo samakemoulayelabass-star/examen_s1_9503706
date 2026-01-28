@@ -9,14 +9,12 @@ class Lowder extends StatefulWidget {
 }
 
 class _LowderState extends State<Lowder> {
-
   @override
   void initState() {
     super.initState();
 
     Future.delayed(const Duration(seconds: 3), () {
       if (!mounted) return;
-
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const LoginPage()),
@@ -27,9 +25,7 @@ class _LowderState extends State<Lowder> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: CircularProgressIndicator(),
-      ),
+      body: Center(child: CircularProgressIndicator()),
     );
   }
 }
